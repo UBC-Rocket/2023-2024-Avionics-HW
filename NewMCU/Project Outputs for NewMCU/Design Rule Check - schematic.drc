@@ -1,0 +1,94 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc
+Date     : 2023-06-15
+Time     : 11:08:22 PM
+
+Processing Rule : Clearance Constraint (Gap=0.127mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C1-1(30.94mm,12.7mm) on Top And Pad JP1-4(48mm,13.49mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Track (30.09mm,22.225mm)(30.441mm,22.576mm) on Top And Pad C1-1(30.94mm,12.7mm) on Top 
+   Violation between Un-Routed Net Constraint: Net VCC Between Track (25.049mm,22.692mm)(25.4mm,22.34mm) on Top And Pad C1-2(27.94mm,12.7mm) on Top 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C8-2(17.145mm,28.766mm) on Top And Pad C2-2(19.685mm,31.36mm) on Top 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C2-2(19.685mm,31.36mm) on Top And Track (23.97mm,35.49mm)(23.979mm,35.499mm) on Top 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C4-2(34.925mm,32.63mm) on Top And Pad P1-4(81.28mm,48.26mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad L1-1(20.955mm,23.455mm) on Top And Pad U1-1(21.42mm,33.44mm) on Top 
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad L1-1(20.955mm,23.455mm) on Top And Track (25.049mm,22.692mm)(25.4mm,22.34mm) on Top 
+   Violation between Un-Routed Net Constraint: Net NetC7_1 Between Pad L1-2(20.955mm,24.805mm) on Top And Track (20.449mm,27.431mm)(21.411mm,27.431mm) on Top 
+   Violation between Un-Routed Net Constraint: Net SWO Between Pad U1-55(27.97mm,35.49mm) on Top And Pad P1-1(81.28mm,40.64mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NRST Between Pad U1-7(21.42mm,30.44mm) on Top And Pad P1-2(81.28mm,43.18mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net SWDIO Between Pad U1-46(33.02mm,32.44mm) on Top And Pad P1-3(81.28mm,45.72mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net SWCLK Between Pad U1-49(30.97mm,35.49mm) on Top And Pad P1-5(81.28mm,50.8mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net VCC Between Track (34.449mm,34.219mm)(34.449mm,34.329mm) on Top And Pad P1-6(81.28mm,53.34mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad U1-1(21.42mm,33.44mm) on Top And Pad U1-64(23.47mm,35.49mm) on Top 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-12(21.42mm,27.94mm) on Top And Track (23.35mm,22.225mm)(23.35mm,22.35mm) on Top 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-31(30.47mm,23.89mm) on Top And Pad U1-47(33.02mm,32.94mm) on Top 
+   Violation between Un-Routed Net Constraint: Net VCC Between Pad U1-64(23.47mm,35.49mm) on Top And Track (33.02mm,33.44mm)(33.67mm,33.44mm) on Top 
+   Violation between Un-Routed Net Constraint: Net GND Between Track (23.35mm,22.35mm)(23.701mm,22.701mm) on Top And Track (30.441mm,22.576mm)(30.441mm,22.782mm) on Top 
+   Violation between Un-Routed Net Constraint: Net VCC Between Track (25.049mm,22.692mm)(25.4mm,22.34mm) on Top And Track (30.97mm,23.24mm)(31.509mm,22.701mm) on Top 
+Rule Violations :20
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.127mm) (Max=25.4mm) (Preferred=0.127mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.127mm) (Air Gap=0.127mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.076mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.25mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+   Violation between Board Outline Clearance(Cutout Edge): (Collision < 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH1(2.54mm,2.54mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Cutout Edge): (Collision < 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH2(52.07mm,2.54mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Cutout Edge): (Collision < 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH3(52.07mm,57.15mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Cutout Edge): (Collision < 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH4(2.54mm,57.15mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Pad P1-1(81.28mm,40.64mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Pad P1-2(81.28mm,43.18mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Pad P1-3(81.28mm,45.72mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Pad P1-4(81.28mm,48.26mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Pad P1-5(81.28mm,50.8mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Pad P1-6(81.28mm,53.34mm) on Multi-Layer 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Text "1" (79.58mm,40.52mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Text "6" (79.58mm,52.96mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Text "P1" (78.664mm,55.753mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (79.935mm,39.22mm)(79.935mm,54.76mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (79.935mm,39.22mm)(82.625mm,39.22mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (79.935mm,54.76mm)(82.625mm,54.76mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (82.625mm,39.22mm)(82.625mm,54.76mm) on Top Overlay 
+Rule Violations :17
+
+Processing Rule : Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 37
+Waived Violations : 0
+Time Elapsed        : 00:00:01

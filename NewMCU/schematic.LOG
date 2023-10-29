@@ -1,0 +1,32 @@
+Importer Log Report
+Project : schematic.PrjPcb
+
+Section : Analyze Document - C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\Avionics Stackable Board Template\schematic.brd
+    Analyzing data of C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\Avionics Stackable Board Template\schematic.brd
+    Load settings
+    Load layers 145
+    Load board
+    Load Library "adafruit"
+    Load Packages 1
+    ERROR: Unhandled typepackages3d
+    ERROR: Unhandled typemfgpreviewcolors
+EndSection
+
+Section : Analyze Document - C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\Avionics Stackable Board Template\schematic.sch
+    Analyzing data of C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\Avionics Stackable Board Template\schematic.sch
+    Load settings
+    Load layers 145
+    Load schematic
+    Load Libraries 1
+    Load Library "adafruit"
+    Load Packages 2
+    ERROR: Unhandled typepackages3d
+    Load Symbols 1
+    Load DeviceSets 1
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    Load Attributes 0
+    Load Classes 1
+    Load Parts 2
+    Load Sheets 1
+EndSection

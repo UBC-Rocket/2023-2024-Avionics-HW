@@ -1,0 +1,455 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2023-06-15</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:08:22 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc" class="file"><acronym title="C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc">C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">37</td></tr>
+</table>
+</td>
+</table><a name="IDH5C2AGVPOAEGPHL4T3LRA2WIAL2EXRAXBEPKUGP5LIL0NDBMAUOH"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMLQ4MUSO244UOVIDLQOKZPGSOKMDBQTJ1Y4CRTO4F51TLNW1XGCO">Clearance Constraint (Gap=0.127mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1AHNSKS0CBCUJNWATMZDV4SGTDHZIWZBE5SMUGMV5FZVB3TL5IRD">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGMC0OECOFSNQLRWZHLS4ARHZHOZGSZHFRJ3ACCFRHYDKRPNODRLP">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">20</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUHUPARMAIN4LPYIYKLD2KJTDFPS0PHLZQRQO0KDY01RL1AN3R0XJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4XUYLGKWJPORD5IZAQS1H2GMELHTIAZYAWI1APFVAK0SYPUSTTWL">Width Constraint (Min=0.127mm) (Max=25.4mm) (Preferred=0.127mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNZZW3SVAQ0OAKWRPGGT2YHBMRO1FJA5UAIUOG0C2M3IACNUUG50L">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0LKLBOZYZWMBF5ES2OS54U55KNAFKTIO3OLZRQM34C3EJ3ZLK4PG">Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.127mm) (Air Gap=0.127mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGRKFKK4BP0YGCSLASTDWGCVHZMTNGE0HNQ43EHK2SXB2CCDFLQUL">Minimum Annular Ring (Minimum=0.076mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTVMI5GZ41FHWDEEFM2QOX1SCXIIWKFM5XVSTXENKZADTB0QHL4SP">Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDX1EMD224WTS1CV3AR0BX2PU30LKS1HPO0VO4LSD4O3KBL5QNZSQG">Hole To Hole Clearance (Gap=0.25mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDEOKBM31MMDLNCS0MPS5EHNNXJW4TP4VLSGV0ML4MFNWCYXOFWBG">Minimum Solder Mask Sliver (Gap=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT5VVRGZ4VWMSKQYRRABOSTDMQNSR4NAEYZGXXXDNYTQC3PQD13KJ">Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNIWZZ34SYWPFISAR51YOI2P0BJJ5F01UNDSXQDGUWHJHNDEMOIKO">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOONBNKJ1WCIIFMQL1K1LYICPTPC1MIHEFZNN1OLSNNUHPGRB0MAK">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0UJE2OOQ1AN5IY2WEYYVDHJQNFBFNEWKQ154Y4KIGYOMINZF3VSN">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">17</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSJP2CSIM5XTTCCI4YEHZP3AP1JWESY1YGQP3OWFLLF4503LZLQDK">Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">37</td>
+</tr>
+</table><br><a name="IDGMC0OECOFSNQLRWZHLS4ARHZHOZGSZHFRJ3ACCFRHYDKRPNODRLP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1192.52mil|Location2.X=1952.713mil|Location1.Y=443.898mil|Location2.Y=564.053mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1192.52mil|Location2.X=1952.713mil|Location1.Y=443.898mil|Location2.Y=564.053mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(30.94mm,12.7mm) on Top And Pad JP1-4(48mm,13.49mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1098.468mil|Location2.X=1318.11mil|Location1.Y=788.823mil|Location2.Y=600mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1098.468mil|Location2.X=1318.11mil|Location1.Y=788.823mil|Location2.Y=600mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (30.09mm,22.225mm)(30.441mm,22.576mm) on Top And Pad C1-1(30.94mm,12.7mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=900mil|Location2.X=1200mil|Location1.Y=779.546mil|Location2.Y=600mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=900mil|Location2.X=1200mil|Location1.Y=779.546mil|Location2.Y=600mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Track (25.049mm,22.692mm)(25.4mm,22.34mm) on Top And Pad C1-2(27.94mm,12.7mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=653.972mil|Location2.X=798.744mil|Location1.Y=1108.764mil|Location2.Y=1253.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=653.972mil|Location2.X=798.744mil|Location1.Y=1108.764mil|Location2.Y=1253.468mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C8-2(17.145mm,28.766mm) on Top And Pad C2-2(19.685mm,31.36mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=675mil|Location2.X=1044.047mil|Location1.Y=1134.646mil|Location2.Y=1497.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=675mil|Location2.X=1044.047mil|Location1.Y=1134.646mil|Location2.Y=1497.591mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C2-2(19.685mm,31.36mm) on Top And Track (23.97mm,35.49mm)(23.979mm,35.499mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1351.256mil|Location2.X=3234.449mil|Location1.Y=1265.823mil|Location2.Y=1934.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1351.256mil|Location2.X=3234.449mil|Location1.Y=1265.823mil|Location2.Y=1934.449mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C4-2(34.925mm,32.63mm) on Top And Pad P1-4(81.28mm,48.26mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.858mil|Location2.X=877.756mil|Location1.Y=910.63mil|Location2.Y=1325.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.858mil|Location2.X=877.756mil|Location1.Y=910.63mil|Location2.Y=1325.394mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad L1-1(20.955mm,23.455mm) on Top And Pad U1-1(21.42mm,33.44mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=725mil|Location2.X=1100mil|Location1.Y=823.425mil|Location2.Y=979.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=725mil|Location2.X=1100mil|Location1.Y=823.425mil|Location2.Y=979.546mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad L1-1(20.955mm,23.455mm) on Top And Track (25.049mm,22.692mm)(25.4mm,22.34mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=725mil|Location2.X=942.961mil|Location1.Y=876.575mil|Location2.Y=1179.969mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=725mil|Location2.X=942.961mil|Location1.Y=876.575mil|Location2.Y=1179.969mil|Absolute=True">Un-Routed Net Constraint: Net NetC7_1 Between Pad L1-2(20.955mm,24.805mm) on Top And Track (20.449mm,27.431mm)(21.411mm,27.431mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1092.323mil|Location2.X=3234.449mil|Location1.Y=1362.795mil|Location2.Y=1634.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1092.323mil|Location2.X=3234.449mil|Location1.Y=1362.795mil|Location2.Y=1634.449mil|Absolute=True">Un-Routed Net Constraint: Net SWO Between Pad U1-55(27.97mm,35.49mm) on Top And Pad P1-1(81.28mm,40.64mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.858mil|Location2.X=3234.449mil|Location1.Y=1189.567mil|Location2.Y=1734.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.858mil|Location2.X=3234.449mil|Location1.Y=1189.567mil|Location2.Y=1734.449mil|Absolute=True">Un-Routed Net Constraint: Net NRST Between Pad U1-7(21.42mm,30.44mm) on Top And Pad P1-2(81.28mm,43.18mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1265.551mil|Location2.X=3234.449mil|Location1.Y=1268.307mil|Location2.Y=1834.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1265.551mil|Location2.X=3234.449mil|Location1.Y=1268.307mil|Location2.Y=1834.449mil|Absolute=True">Un-Routed Net Constraint: Net SWDIO Between Pad U1-46(33.02mm,32.44mm) on Top And Pad P1-3(81.28mm,45.72mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1210.433mil|Location2.X=3234.449mil|Location1.Y=1362.795mil|Location2.Y=2034.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1210.433mil|Location2.X=3234.449mil|Location1.Y=1362.795mil|Location2.Y=2034.449mil|Absolute=True">Un-Routed Net Constraint: Net SWCLK Between Pad U1-49(30.97mm,35.49mm) on Top And Pad P1-5(81.28mm,50.8mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1256.256mil|Location2.X=3300mil|Location1.Y=1251.531mil|Location2.Y=2200mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1256.256mil|Location2.X=3300mil|Location1.Y=1251.531mil|Location2.Y=2200mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Track (34.449mm,34.219mm)(34.449mm,34.329mm) on Top And Pad P1-6(81.28mm,53.34mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.858mil|Location2.X=932.874mil|Location1.Y=1307.677mil|Location2.Y=1431.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.858mil|Location2.X=932.874mil|Location1.Y=1307.677mil|Location2.Y=1431.693mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U1-1(21.42mm,33.44mm) on Top And Pad U1-64(23.47mm,35.49mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=743.307mil|Location2.X=1019.291mil|Location1.Y=1000mil|Location2.Y=979.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=743.307mil|Location2.X=1019.291mil|Location1.Y=1000mil|Location2.Y=979.921mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-12(21.42mm,27.94mm) on Top And Track (23.35mm,22.225mm)(23.35mm,22.35mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1190.748mil|Location2.X=1334.449mil|Location1.Y=906.102mil|Location2.Y=1305.709mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1190.748mil|Location2.X=1334.449mil|Location1.Y=906.102mil|Location2.Y=1305.709mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-31(30.47mm,23.89mm) on Top And Pad U1-47(33.02mm,32.94mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=824.016mil|Location2.X=1425.591mil|Location1.Y=1297.244mil|Location2.Y=1416.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=824.016mil|Location2.X=1425.591mil|Location1.Y=1297.244mil|Location2.Y=1416.535mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U1-64(23.47mm,35.49mm) on Top And Track (33.02mm,33.44mm)(33.67mm,33.44mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=833.114mil|Location2.X=1298.468mil|Location1.Y=793.744mil|Location2.Y=996.917mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=833.114mil|Location2.X=1298.468mil|Location1.Y=793.744mil|Location2.Y=996.917mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (23.35mm,22.35mm)(23.701mm,22.701mm) on Top And Track (30.441mm,22.576mm)(30.441mm,22.782mm) on Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=900mil|Location2.X=1319.291mil|Location1.Y=779.546mil|Location2.Y=1014.961mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=900mil|Location2.X=1319.291mil|Location1.Y=779.546mil|Location2.Y=1014.961mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Track (25.049mm,22.692mm)(25.4mm,22.34mm) on Top And Track (30.97mm,23.24mm)(31.509mm,22.701mm) on Top </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID0UJE2OOQ1AN5IY2WEYYVDHJQNFBFNEWKQ154Y4KIGYOMINZF3VSN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=96.875mil|Location2.X=103.124mil|Location1.Y=96.875mil|Location2.Y=103.124mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=96.875mil|Location2.X=103.124mil|Location1.Y=96.875mil|Location2.Y=103.124mil|Absolute=True">Board Outline Clearance(Cutout Edge): (Collision &lt; 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH1(2.54mm,2.54mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2046.875mil|Location2.X=2053.125mil|Location1.Y=96.875mil|Location2.Y=103.124mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2046.875mil|Location2.X=2053.125mil|Location1.Y=96.875mil|Location2.Y=103.124mil|Absolute=True">Board Outline Clearance(Cutout Edge): (Collision &lt; 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH2(52.07mm,2.54mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2046.875mil|Location2.X=2053.125mil|Location1.Y=2246.875mil|Location2.Y=2253.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2046.875mil|Location2.X=2053.125mil|Location1.Y=2246.875mil|Location2.Y=2253.125mil|Absolute=True">Board Outline Clearance(Cutout Edge): (Collision &lt; 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH3(52.07mm,57.15mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=96.875mil|Location2.X=103.124mil|Location1.Y=2246.875mil|Location2.Y=2253.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=96.875mil|Location2.X=103.124mil|Location1.Y=2246.875mil|Location2.Y=2253.125mil|Absolute=True">Board Outline Clearance(Cutout Edge): (Collision &lt; 0.2mm) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Pad Free-MH4(2.54mm,57.15mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1596.875mil|Location2.Y=1603.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1596.875mil|Location2.Y=1603.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Pad P1-1(81.28mm,40.64mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1696.875mil|Location2.Y=1703.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1696.875mil|Location2.Y=1703.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Pad P1-2(81.28mm,43.18mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1796.875mil|Location2.Y=1803.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1796.875mil|Location2.Y=1803.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Pad P1-3(81.28mm,45.72mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1896.875mil|Location2.Y=1903.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1896.875mil|Location2.Y=1903.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Pad P1-4(81.28mm,48.26mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1996.875mil|Location2.Y=2003.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1996.875mil|Location2.Y=2003.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Pad P1-5(81.28mm,50.8mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=2096.875mil|Location2.Y=2103.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=2096.875mil|Location2.Y=2103.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Pad P1-6(81.28mm,53.34mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.953mil|Location2.X=3116.202mil|Location1.Y=1598.815mil|Location2.Y=1605.065mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.953mil|Location2.X=3116.202mil|Location1.Y=1598.815mil|Location2.Y=1605.065mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Text "1" (79.58mm,40.52mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.953mil|Location2.X=3116.202mil|Location1.Y=2095.244mil|Location2.Y=2101.493mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3109.953mil|Location2.X=3116.202mil|Location1.Y=2095.244mil|Location2.Y=2101.493mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Text "6" (79.58mm,52.96mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3133.862mil|Location2.X=3140.112mil|Location1.Y=2221.866mil|Location2.Y=2228.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3133.862mil|Location2.X=3140.112mil|Location1.Y=2221.866mil|Location2.Y=2228.115mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Text "P1" (78.664mm,55.753mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3143.923mil|Location2.X=3150.172mil|Location1.Y=1846.875mil|Location2.Y=1853.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3143.923mil|Location2.X=3150.172mil|Location1.Y=1846.875mil|Location2.Y=1853.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (79.935mm,39.22mm)(79.935mm,54.76mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1540.97mil|Location2.Y=1547.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=1540.97mil|Location2.Y=1547.219mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (79.935mm,39.22mm)(82.625mm,39.22mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=2152.781mil|Location2.Y=2159.03mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3196.875mil|Location2.X=3203.125mil|Location1.Y=2152.781mil|Location2.Y=2159.03mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (79.935mm,54.76mm)(82.625mm,54.76mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.828mil|Location2.X=3256.077mil|Location1.Y=1846.875mil|Location2.Y=1853.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\schematic.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.828mil|Location2.X=3256.077mil|Location1.Y=1846.875mil|Location2.Y=1853.125mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (82.625mm,39.22mm)(82.625mm,54.76mm) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
