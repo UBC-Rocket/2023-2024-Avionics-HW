@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConstraintsData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FlattenedNetName2ConstraintNetId />
+  <CNets />
+  <CNetClasses />
+  <CDifferentialPairs />
+  <CDifferentialPairClasses />
+  <CPinPairs />
+  <CxSigClasses />
+  <CxNets />
+  <ConstraintClearancesMatrix>
+    <CCMFromScopes>
+      <CCMFromScope Id="d7134b23-6a46-4868-b642-0ea515cf7c6a">
+        <ConstraintObject Id="00000000-0000-0000-0000-000000000000" />
+        <CCMToScopes>
+          <CCMToScope Id="3c24e8c2-1dc1-4872-b133-6b17510eee3c" SetId="00000000-0000-0000-0000-000000000000">
+            <ConstraintObject Id="00000000-0000-0000-0000-000000000000" />
+            <DefaultConstraintClearancesMatrixConstraint Id="00000000-0000-0000-0000-000000000000" Kind="0" Name="" Description="" Scope1="" Scope2="" Attributes="" LayerType="0" LayerId="0" />
+            <CCMConstraints>
+              <CCMConstraint Id="4655045b-4436-40f0-895d-f66192bcba29" Kind="0" Name="Clearance_1" Description="Clearance Constraint [Generic clearance = 10mil, and 7 value(s) for objects]" Scope1="OnMid" Scope2="OnMid" Attributes="NETSCOPE=DifferentNets|LAYERKIND=SameLayer|GAP=10mil|GENERICCLEARANCE=10mil|IGNOREPADTOPADCLEARANCEINFOOTPRINT=TRUE|OBJECTCLEARANCES=ClearanceObj_Arc-ClearanceObj_Arc:50000;ClearanceObj_Arc-ClearanceObj_Track:50000;ClearanceObj_Arc-ClearanceObj_SMDPad:78740;ClearanceObj_Track-ClearanceObj_Track:50000;ClearanceObj_Track-ClearanceObj_SMDPad:78740;ClearanceObj_SMDPad-ClearanceObj_SMDPad:50000;ClearanceObj_SMDPad-ClearanceObj_Text:78740" LayerType="2" LayerId="0" />
+              <CCMConstraint Id="b75869ae-bab9-40ba-b699-07c281258c4e" Kind="0" Name="Clearance_2" Description="Clearance Constraint [Generic clearance = 10mil, and 7 value(s) for objects]" Scope1="(ExistsOnLayer('Top Layer') Or ExistsOnLayer('Bottom Layer'))" Scope2="(ExistsOnLayer('Top Layer') Or ExistsOnLayer('Bottom Layer'))" Attributes="NETSCOPE=DifferentNets|LAYERKIND=SameLayer|GAP=10mil|GENERICCLEARANCE=10mil|IGNOREPADTOPADCLEARANCEINFOOTPRINT=TRUE|OBJECTCLEARANCES=ClearanceObj_Arc-ClearanceObj_Arc:50000;ClearanceObj_Arc-ClearanceObj_Track:50000;ClearanceObj_Arc-ClearanceObj_SMDPad:78740;ClearanceObj_Track-ClearanceObj_Track:50000;ClearanceObj_Track-ClearanceObj_SMDPad:78740;ClearanceObj_SMDPad-ClearanceObj_SMDPad:50000;ClearanceObj_SMDPad-ClearanceObj_Text:78740" LayerType="1" LayerId="0" />
+            </CCMConstraints>
+          </CCMToScope>
+        </CCMToScopes>
+      </CCMFromScope>
+    </CCMFromScopes>
+  </ConstraintClearancesMatrix>
+  <ConstraintSameNetClearancesMatrix>
+    <CCMFromScopes />
+  </ConstraintSameNetClearancesMatrix>
+  <CSets />
+  <CClearancesMatrixSets />
+</ConstraintsData>
