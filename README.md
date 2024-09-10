@@ -1,2 +1,3 @@
-# 2023-Avionics
-UBC Rocket avionics hardware for 2023
+# 2024-2023_Avionics
+Repo containing UBC Rocket's 2023/2024 COTS avionics board designs.
+
