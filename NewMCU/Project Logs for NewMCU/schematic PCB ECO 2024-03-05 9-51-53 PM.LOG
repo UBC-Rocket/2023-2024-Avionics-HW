@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=GND Pin=R13-1
+Removed Pin From Net: NetName=SD_CS Pin=R13-2
+Removed Member From Class: ClassName=microSD Member=R13
+Added Pin To Net: NetName=SD_CS Pin=U1-40

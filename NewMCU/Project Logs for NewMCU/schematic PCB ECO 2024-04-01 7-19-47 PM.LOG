@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=VCC Pin=MICRO_SD-1
+Removed Pin From Net: NetName=VCC Pin=MICRO_SD-8
+Change Component Designator: OldDesignator=R5 NewDesignator=R7
+Added Component: Designator=R5(RESCAXE80P320X160X70-8N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/YC164-JR-0747KL/Yageo/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part #"; Value = "C779384"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "YC164-JR-0747KL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/YC164-JR-0747KL/Yageo/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=R5-5
+Added Pin To Net: NetName=VCC Pin=R5-6
+Added Pin To Net: NetName=VCC Pin=R5-7
+Added Pin To Net: NetName=VCC Pin=R5-8
+Added Pin To Net: NetName=DAT1 Pin=MICRO_SD-8
+Added Pin To Net: NetName=DAT1 Pin=R5-1
+Added Net: Name=DAT1
+Added Pin To Net: NetName=DAT2 Pin=MICRO_SD-1
+Added Pin To Net: NetName=DAT2 Pin=R5-2
+Added Net: Name=DAT2
+Added Member To Class: ClassName=microSD Member=Component R5 YC164-JR-0747KL

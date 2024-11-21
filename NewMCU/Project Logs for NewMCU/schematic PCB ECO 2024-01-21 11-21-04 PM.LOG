@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=IGN3_2 Pin=U1-40
+Added Pin To Net: NetName=IGN_CHK3 Pin=U1-41
+Added Pin To Net: NetName=IGN_CHK2 Pin=U1-42
+Added Pin To Net: NetName=IGN_CHK1 Pin=U1-43
+Added Pin To Net: NetName=IGN3_2 Pin=U1-44

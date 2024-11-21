@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=VCC Pin=LS-2
+Removed Pin From Net: NetName=VCC Pin=R3-2
+Added Pin To Net: NetName=3V3 Pin=L2-1
+Added Pin To Net: NetName=3V3 Pin=LS-2
+Added Pin To Net: NetName=3V3 Pin=P1-6
+Added Pin To Net: NetName=3V3 Pin=R3-2
+Added Net: Name=3V3
+Added Member To Class: ClassName=MCU Member=Component Y2 SIT1630AI-S4-DCC-32.768E

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=SCK2 Pin=TP6-1
+Removed Pin From Net: NetName=MOSI2 Pin=TP7-1
+Removed Pin From Net: NetName=MISO2 Pin=TP8-1
+Removed Pin From Net: NetName=SD_CS Pin=TP9-1
+Removed Member From Class: ClassName=microSD Member=TP6
+Removed Member From Class: ClassName=microSD Member=TP7
+Removed Member From Class: ClassName=microSD Member=TP8
+Removed Member From Class: ClassName=microSD Member=TP9
+Change Component Designator: OldDesignator=TP10 NewDesignator=TP6

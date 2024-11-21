@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=VCC Pin=JP1-1
+Removed Pin From Net: NetName=3V3 Pin=P1-6
+Removed Member From Class: ClassName=MCU Member=L2
+Added Pin To Net: NetName=3V3 Pin=JP1-1
+Added Pin To Net: NetName=VCC Pin=P1-6
+Added Member To Class: ClassName=schematic Member=Component L2 BLM18EG601SN1D

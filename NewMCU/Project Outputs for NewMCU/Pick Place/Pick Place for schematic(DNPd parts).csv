@@ -1,0 +1,42 @@
+Altium Designer Pick and Place Locations
+C:\Users\callu\Documents\UBC Rocket\GitHub\2022-Avionics\NewMCU\Project Outputs for NewMCU\Pick Place\Pick Place for schematic(DNPd parts).csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       08-04-24
+Time:       00:07
+Revision:   57d6545fab9704d8dbe7b785493930cea532d8d1
+Variant:    DNPd parts
+Units used: mil
+
+"Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"R4","YC164-JR-0747KL","TopLayer","RESCAXE80P320X160X70-8N","751.139","834.842","90","47k Ohm Â±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array Â±200ppm/Â°C 1206 (3216 Metric), Convex, Long Side Terminals"
+"R5","YC164-JR-0747KL","TopLayer","RESCAXE80P320X160X70-8N","588.681","834.842","90","47k Ohm Â±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array Â±200ppm/Â°C 1206 (3216 Metric), Convex, Long Side Terminals"
+"C15","CL10A105KO8NNNC","TopLayer","FP-CL10-IPC_A","987.500","1904.941","270","Cap Ceramic 1uF 16V X5R ±10% Pad SMD 0603 +85°C T/R"
+"C14","CC0603KRX7R9BB103","TopLayer","FP-CC0603-DA-MFG","1100.000","1859.321","90","CAP CER 10000PF 50V X7R 0603"
+"C13","CC0603KRX7R9BB103","TopLayer","FP-CC0603-DA-MFG","1000.000","2075.000","0","CAP CER 10000PF 50V X7R 0603"
+"U2","OPA357AIDBVR","TopLayer","DBV0006A_L","1012.500","1712.500","0","250 MHz, Rail-to-Rail I/O, Single CMOS Operational Amplifier with Shutdown, 2.5 to 5.5 V, -40 to 125 degC, 6-pin SOT23 (DBV6), Green (RoHS & no Sb/Br)"
+"R7","110R 5% 0805(2012)","TopLayer","RESC0805(2012)_N","587.500","1450.000","0","110R 0.125W 5% 0805 (2012 Metric)  SMD"
+"R6","CRCW0805130RFKEA","TopLayer","RESC2013X50X30ML20T20","1700.000","390.354","90",""
+"D2","LTST-C191KGKT","TopLayer","FP-LTST-C191KGKT-MFG","579.528","1350.000","180","LED GREEN CLEAR SMD"
+"D1","LTST-C191KRKT","TopLayer","0603","1612.500","383.465","270","http://octopart.com/ltst-c190krkt-lite-on-549893"
+"MICRO_SD","TF-01A","TopLayer","TF-01A","781.555","398.488","0","Standard Card Edge Connectors"
+"C10","CC0603KRX7R9BB104","TopLayer","FP-CC0603-DA-MFG","912.500","875.000","0","CAP CER 0.1UF 50V X7R 0603"
+"C7","CC0603KRX7R9BB104","TopLayer","FP-CC0603-DA-MFG","1662.500","1350.000","90","CAP CER 0.1UF 50V X7R 0603"
+"C6","CC0603KRX7R9BB104","TopLayer","FP-CC0603-DA-MFG","1375.000","1475.000","0","CAP CER 0.1UF 50V X7R 0603"
+"C5","CC0603KRX7R9BB104","TopLayer","FP-CC0603-DA-MFG","1100.000","1475.000","0","CAP CER 0.1UF 50V X7R 0603"
+"C4","CC0603KRX7R9BB104","TopLayer","FP-CC0603-DA-MFG","937.500","1024.419","90","CAP CER 0.1UF 50V X7R 0603"
+"C3","CC0603KRX7R9BB104","TopLayer","FP-CC0603-DA-MFG","1425.000","857.687","180","CAP CER 0.1UF 50V X7R 0603"
+"C2","CC0603KRX7R9BB104","TopLayer","FP-CC0603-DA-MFG","1562.500","1024.419","90","CAP CER 0.1UF 50V X7R 0603"
+"U1","STM32L476RCT6","TopLayer","STM-LQFP64_L","1250.000","1164.862","180","Ultra-Low-Power ARM Cortex-M4 32-bit MCU+FPU, 256 KB Flash, 128 KB Internal RAM, 51 I/Os, 64-Pin LQFP, -40 to 85 degC, Tray"
+"R3","RC0805FR-071KL","TopLayer","RESC2013X60X35ML10T20","1675.000","1747.844","90","Chip Resistor, 1 KOhm, +/- 1%, 125 mW, -55 to 155 degC, 0805 (2012 Metric), RoHS, Tape and Reel"
+"R2","CRCW0805220RFKEA","TopLayer","FP-CRCW0805-e3-MFG","1400.000","1721.949","270","RES Thick Film, 220O, 1%, 0.125W, 100ppm/°C, 0805"
+"R1","AC0805FR-0710KL","TopLayer","FP-AC0805-MFG","1212.500","637.500","90","RES SMD 10K OHM 1% 1/8W 0805"
+"Q1","MMBT4401LT1G","TopLayer","ONSC-SOT-23-3-318-08_V","1537.500","1737.500","0","Switching Transistor, NPN Silicon, 3-Pin SOT-23, Pb-Free, Tape and Reel"
+"L2","BLM18EG601SN1D","TopLayer","FP-BLM18-0_15-t0_8-MFG","1462.500","412.500","90","Chip Ferrite Bead, 0603, 600O @ 100MHz, 0.35O, 25%, 500mA"
+"L1","BLM18EG601SN1D","TopLayer","FP-BLM18-0_15-t0_8-MFG","1575.000","1374.419","270","Chip Ferrite Bead, 0603, 600O @ 100MHz, 0.35O, 25%, 500mA"
+"C11","CL32B106KAJNNNE","TopLayer","FP-CL32-IPC_B","935.325","762.500","0","Cap Ceramic 10uF 25V X7R ±10% SMD 1210 +125°C Embossed T/R"
+"C9","CL10A105KO8NNNC","TopLayer","FP-CL10-IPC_A","1575.000","1224.419","270","Cap Ceramic 1uF 16V X5R ±10% Pad SMD 0603 +85°C T/R"
+"C8","CC0603KRX7R9BB103","TopLayer","FP-CC0603-DA-MFG","1662.500","1224.419","270","CAP CER 10000PF 50V X7R 0603"
+"C1","CL32B106KAJNNNE","TopLayer","FP-CL32-IPC_B","1562.500","796.602","270","Cap Ceramic 10uF 25V X7R ±10% SMD 1210 +125°C Embossed T/R"

@@ -1,0 +1,48 @@
+Removed Pin From Net: NetName=GND Pin=Q1-1
+Removed Pin From Net: NetName=TX2 Pin=R5-1
+Removed Pin From Net: NetName=RX2 Pin=R6-1
+Removed Pin From Net: NetName=RX3 Pin=R7-1
+Removed Pin From Net: NetName=TX3 Pin=R8-2
+Removed Pin From Net: NetName=TX1 Pin=R9-1
+Removed Pin From Net: NetName=RX1 Pin=R10-1
+Removed Member From Class: ClassName=MCU Member=R7
+Removed Member From Class: ClassName=MCU Member=R8
+Removed Member From Class: ClassName=MCU Member=R9
+Removed Member From Class: ClassName=MCU Member=R10
+Removed Member From Class: ClassName=MCU Member=R11
+Removed Member From Class: ClassName=MCU Member=R12
+Change Component Footprint: Designator=Q1 Old Footprint=FAIR-TO-92-3 New Footprint=ONSC-SOT-23-3-318-08_V
+Change Component Comment : Designator=Q1 Old Comment=PN2222ATF New Comment=MMBT4401LT1G
+Change Component Designator: OldDesignator=R11 NewDesignator=R6
+Change Component Designator: OldDesignator=R12 NewDesignator=R5
+Change Managed Component Library Link : Designator=Q1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=544919C1-F98B-441D-99D5-B73ACC35D84B New ItemGUID=960B652B-9343-4136-9B92-0A7EED67C55A Old RevisionGUID=2E3DE88E-3BCE-410A-B71C-5AFEFFC91C64 New RevisionGUID=E967C442-4CEB-4554-8F95-16C1ACDB349E
+Change component parameters: Designator = "Q1" ("Q1"); Footprint = "FAIR-TO-92-3"; UniqueID = "\SPJLJBGJ" ("\SPJLJBGJ")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.onsemi.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.onsemi.cn/pub_link/Collateral/MMBT4401LT1-D.PDF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.onsemi.cn/pub_link/Collateral/318-08.PDF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "fT Min (MHz)"; Value = "250"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "IC Continuous (A)"; Value = "0.6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LCSC Part #"; Value = "C31776"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "On Semiconductor"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "3-Pin Small Outline Transistor, Body 2.92 x 1.3 mm, Pitch 0.95 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "SOT-23-3-318-08"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageVersion"; Value = "Rev. AP, 11/2009"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packing"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "MMBT4401LT1G"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Polarity"; Value = "NPN"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Q1-2
+Added Pin To Net: NetName=RX1 Pin=U1-8
+Added Pin To Net: NetName=TX1 Pin=U1-9
+Added Pin To Net: NetName=RX2 Pin=U1-14
+Added Pin To Net: NetName=TX2 Pin=U1-15
+Added Pin To Net: NetName=RX3 Pin=U1-53
+Added Pin To Net: NetName=TX3 Pin=U1-54
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_1 Pin=R2-2
+Added Net: Name=NetQ1_1

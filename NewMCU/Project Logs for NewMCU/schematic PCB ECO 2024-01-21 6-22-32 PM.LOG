@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=IGN_CHK1 Pin=U1-16
+Removed Pin From Net: NetName=IGN_CHK2 Pin=U1-17
+Removed Pin From Net: NetName=IGN_CHK3 Pin=U1-20
+Removed Pin From Net: NetName=CS1 Pin=U1-24
+Removed Pin From Net: NetName=CS2 Pin=U1-25
+Removed Pin From Net: NetName=IGN1_1 Pin=U1-26
+Removed Pin From Net: NetName=IGN1_2 Pin=U1-27
+Removed Pin From Net: NetName=IGN2_1 Pin=U1-28
+Removed Pin From Net: NetName=IGN2_2 Pin=U1-30
+Removed Pin From Net: NetName=IGN3_1 Pin=U1-33
+Removed Pin From Net: NetName=IGN3_2 Pin=U1-34
+Removed Pin From Net: NetName=CS3 Pin=U1-37
+Removed Pin From Net: NetName=CS4 Pin=U1-38
+Removed Pin From Net: NetName=CS5 Pin=U1-39

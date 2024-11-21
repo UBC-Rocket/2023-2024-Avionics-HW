@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [DNPd parts] of PCB Document [schematic.PcbDoc]
+   Generated File[Pick Place for schematic(DNPd parts).csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 12:07:59 AM On 2024-04-08

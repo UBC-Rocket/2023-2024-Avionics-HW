@@ -1,0 +1,10 @@
+Change Component Footprint: Designator=R7 Old Footprint=FP-CRCW0805-e3-IPC_B New Footprint=RESC0805(2012)_N
+Change Component Comment : Designator=R7 Old Comment=CRCW080510R0FKEB New Comment=110R 5% 0805(2012)
+Change Managed Component Library Link : Designator=R7 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=73164143-5986-4CEE-85DD-51E7D3BCBA60 New ItemGUID=81E4D02A-D4AD-4F1A-9857-E15480EC0E7F Old RevisionGUID=72C5137A-2DDD-4617-9FB0-3231C3E111D1 New RevisionGUID=31008C46-065B-49F2-9A5D-78CC32B59A9C
+Change component parameters: Designator = "R7" ("R7"); Footprint = "FP-CRCW0805-e3-IPC_B"; UniqueID = "\PKUDFMUA" ("\PKUDFMUA")
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "0.125 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "110.00 Ohm"; VariantName = "[No Variations]"

@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=MISO2 Pin=R5-2
+Added Pin To Net: NetName=MISO2 Pin=R5-3
+Added Member To Class: ClassName=microSD Member=Component R4 YC164-JR-0747KL

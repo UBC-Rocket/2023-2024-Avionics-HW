@@ -1,0 +1,27 @@
+Added Component: Designator=MICRO_SD(TF-01A)
+Add component (AddParameter): Name = "Availability"; Value = "Not in stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/TF-01A/HRO+Electronics+Co.%252C+Ltd./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "HRO Electronics Co., Ltd."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TF-01A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TF-01A/HRO+Electronics+Co.%252C+Ltd./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=MICRO_SD-1
+Added Pin To Net: NetName=SD_CS Pin=MICRO_SD-2
+Added Pin To Net: NetName=MOSI2 Pin=MICRO_SD-3
+Added Pin To Net: NetName=VCC Pin=MICRO_SD-4
+Added Pin To Net: NetName=SCK2 Pin=MICRO_SD-5
+Added Pin To Net: NetName=GND Pin=MICRO_SD-6
+Added Pin To Net: NetName=MISO2 Pin=MICRO_SD-7
+Added Pin To Net: NetName=VCC Pin=MICRO_SD-8
+Added Pin To Net: NetName=GND Pin=MICRO_SD-MP1
+Added Pin To Net: NetName=GND Pin=MICRO_SD-MP2
+Added Pin To Net: NetName=GND Pin=MICRO_SD-MP3
+Added Pin To Net: NetName=GND Pin=MICRO_SD-MP4
+Added Pin To Net: NetName=CS1 Pin=U1-24
+Added Pin To Net: NetName=CS2 Pin=U1-25
+Added Pin To Net: NetName=CS3 Pin=U1-26
+Added Pin To Net: NetName=CS4 Pin=U1-27
+Added Pin To Net: NetName=CS5 Pin=U1-28
+Added Member To Class: ClassName=microSD Member=Component MICRO_SD TF-01A
