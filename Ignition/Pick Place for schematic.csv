@@ -1,0 +1,55 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\Ignition\Project Outputs for Ignition\Pick Place\Pick Place for schematic.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       03-03-24
+Time:       12:32
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"Q1","","TopLayer","FAIR-TO-220AB-3","16,0000","28,0000","90","N-Channel Power MOSFET, 70 A, 60 V, -55 to 175 degC, 3-Pin TO-220AB, RoHS, Tube"
+"R83","220R","TopLayer","RESC1608X55X25NL10T15","39,7000","8,0000","180",""
+"R82","220R","TopLayer","RESC1608X55X25NL10T15","28,0000","7,6708","180",""
+"R73","604R","TopLayer","FP-RMCF0603-IPC_B","38,0000","45,0000","180","604O ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R72","604R","TopLayer","FP-RMCF0603-IPC_B","25,7011","46,0000","180","604O ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R63","10k","TopLayer","FP-RMCF0603-MFG","38,0000","63,0000","180","10kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R62","10k","TopLayer","FP-RMCF0603-MFG","28,0000","63,0000","180","10kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R53","1k","TopLayer","FP-RMCF0603-MFG","44,0000","44,7250","90","1kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R52","1k","TopLayer","FP-RMCF0603-MFG","32,0000","42,7250","90","1kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R43","1k","TopLayer","FP-RMCF0603-MFG","41,0584","43,0000","180","1kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R42","1k","TopLayer","FP-RMCF0603-MFG","30,0000","46,0000","180","1kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R33","1M","TopLayer","FP-ERJ3EK-IPC_C","35,0000","39,0000","0","RES SMD 1M OHM 1% 1/10W 0603"
+"R32","1M","TopLayer","FP-ERJ3EK-IPC_C","22,0000","24,5158","0","RES SMD 1M OHM 1% 1/10W 0603"
+"R23","10k","TopLayer","FP-RMCF0603-MFG","44,0000","18,0000","180","10kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R22","10k","TopLayer","FP-RMCF0603-MFG","33,0000","23,0000","270","10kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R13","100R","TopLayer","FP-RMCF0603-IPC_C","42,0000","22,9166","90","100O ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R12","100R","TopLayer","FP-RMCF0603-IPC_C","30,0000","24,0000","90","100O ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R8","220R","TopLayer","RESC1608X55X25NL10T15","16,0000","7,6708","180",""
+"R7","604R","TopLayer","FP-RMCF0603-IPC_B","13,0000","46,0000","180","604O ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R6","10k","TopLayer","FP-RMCF0603-MFG","16,0000","63,0000","0","10kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R5","1k","TopLayer","FP-RMCF0603-MFG","20,0000","46,0000","270","1kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R4","1k","TopLayer","FP-RMCF0603-MFG","17,0000","46,0000","180","1kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R3","1M","TopLayer","FP-ERJ3EK-IPC_C","14,4008","17,0000","90","RES SMD 1M OHM 1% 1/10W 0603"
+"R2","10k","TopLayer","FP-RMCF0603-MFG","16,5375","24,0000","270","10kO ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"R1","100R","TopLayer","FP-RMCF0603-IPC_C","10,0000","24,2866","90","100O ±1% 0.1W 0603 Thick Film Chip Resistor AEC-Q200 compliant"
+"Q13","","TopLayer","FAIR-TO-220AB-3","40,4951","28,0000","90","N-Channel Power MOSFET, 70 A, 60 V, -55 to 175 degC, 3-Pin TO-220AB, RoHS, Tube"
+"Q12","","TopLayer","FAIR-TO-220AB-3","28,2117","28,0000","90","N-Channel Power MOSFET, 70 A, 60 V, -55 to 175 degC, 3-Pin TO-220AB, RoHS, Tube"
+"OP13","","TopLayer","FP-DBV0005A-MFG","41,0000","39,3000","90","IC OPAMP GP 1 CIRCUIT SOT23-5"
+"OP12","","TopLayer","FP-DBV0005A-MFG","28,0000","42,0000","90","IC OPAMP GP 1 CIRCUIT SOT23-5"
+"OP1","","TopLayer","FP-DBV0005A-MFG","16,0000","41,0000","90","IC OPAMP GP 1 CIRCUIT SOT23-5"
+"OC23","","TopLayer","FP-VO618A-3X017T-MFG","40,0000","56,0000","90","OPTOISOLATOR 5.3KV TRANS 4-SMD"
+"OC22","","TopLayer","FP-VO618A-3X017T-MFG","28,0000","56,0000","90","OPTOISOLATOR 5.3KV TRANS 4-SMD"
+"OC13","","TopLayer","FP-VO618A-3X017T-MFG","39,0000","14,8166","90","OPTOISOLATOR 5.3KV TRANS 4-SMD"
+"OC12","","TopLayer","FP-VO618A-3X017T-MFG","29,0000","15,0000","90","OPTOISOLATOR 5.3KV TRANS 4-SMD"
+"OC2","","TopLayer","FP-VO618A-3X017T-MFG","17,0000","56,0000","90","OPTOISOLATOR 5.3KV TRANS 4-SMD"
+"OC1","","TopLayer","FP-VO618A-3X017T-MFG","18,2700","15,7650","90","OPTOISOLATOR 5.3KV TRANS 4-SMD"
+"J23","","TopLayer","PHOE-1725656-2","35,7300","2,2700","0","Male Header, Pitch 2.54 mm, 1 x 2 Position, Height 9 mm, Tail Length 3.5 mm"
+"J22","","TopLayer","PHOE-1725656-2","24,7300","2,1965","0","Male Header, Pitch 2.54 mm, 1 x 2 Position, Height 9 mm, Tail Length 3.5 mm"
+"J2","","TopLayer","PHOE-1725656-2","12,7300","2,1965","0","Male Header, Pitch 2.54 mm, 1 x 2 Position, Height 9 mm, Tail Length 3.5 mm"
+"J1","XT30","TopLayer","XT30UPB-M","49,0000","3,0000","0","Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; yellow; 15A; 500V"
+"JP2","PINHD-1X20","TopLayer","1X20","7,0000","36,3499","90","PIN HEADER"
+"JP1","PINHD-1X20","TopLayer","1X20","47,9999","36,3499","90","PIN HEADER"
